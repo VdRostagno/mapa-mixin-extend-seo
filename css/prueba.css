@@ -1,0 +1,102 @@
+header {
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: none;
+  height: none;
+  width: 100%; }
+
+.Menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: none;
+  height: 200px;
+  width: 100px;
+  color: white;
+  background: linear-gradient(to bottom, red, orange, yellow, green, skyblue);
+  border: none;
+  float: left;
+  cursor: pointer;
+  border: 5px solid; }
+  .Menu a {
+    text-decoration: none;
+    color: black; }
+
+.titulo, .titulocomunicacion, .tituloarquitectura, .tituloasesorialegal, .tituloenfermeria {
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: none;
+  height: 75px;
+  width: 350px;
+  margin: 30px;
+  border: 2px solid;
+  font-family: 'Noto Sans', sans-serif;
+  background: linear-gradient(to left, red, orange, yellow, green, blue);
+  transform: skewY(5deg); }
+
+#imagenhigiene, #imagenrender1, #imagenrender2, #imagenlogo {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  border: 3px solid white; }
+
+.titulocomunicacion {
+  background-color: "skyblue";
+  height: none;
+  width: 200px; }
+
+.tituloarquitectura {
+  background-color: "yellow";
+  height: none;
+  width: 200px; }
+
+.tituloasesorialegal {
+  background-color: "brown";
+  height: none;
+  width: 200px; }
+
+.tituloenfermeria {
+  background-color: "green";
+  height: none;
+  width: 200px; }
+
+#Tabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  height: none;
+  width: 100%;
+  background-color: "white";
+  color: "black"; }
+  #Tabla th, #Tabla td {
+    border: solid 1px black; }
+  #Tabla thead {
+    background-color: "skyblue";
+    border-bottom: solid 5px;
+    color: "black"; }
+
+footer {
+  height: 100%;
+  width: 100%;
+  background-color: "black"; }
+  footer .formulariodecontacto, footer .redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    height: 50%;
+    width: 100%;
+    background-color: black;
+    color: "white"; }
+  footer .Facebook {
+    text-decoration: none;
+    color: "blue"; }
+  footer .Instagram {
+    text-decoration: none;
+    color: "violet"; }
+  footer .Correoelectronico {
+    text-decoration: none;
+    color: "red"; }

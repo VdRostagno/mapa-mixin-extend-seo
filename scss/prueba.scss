@@ -1,0 +1,131 @@
+$colores: (blanco: "white", rojo:"red", negro:"black", celeste: "skyblue", verde:"green", naranja:"orange", amarillo:"yellow", azul:"blue", marron:"brown", violeta: "violet",);
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+ }
+ @mixin flex ($dir, $jus, $alg){
+display: flex;
+flex-direction: $dir;
+justify-content: $jus;
+align-items: $alg;     
+ }
+ 
+
+header {
+    @include flex(none,center,none);
+    display: flex;
+    @include sizes(100%,none);
+
+}
+.Menu{
+    @include flex(column,center,none);
+    display: flex;
+    @include sizes (100px, 200px);
+    color:white;
+    background: linear-gradient(to bottom, red, orange, yellow, green,skyblue);
+    border: none;
+    float: left;
+    cursor: pointer;
+    border: 5px solid;
+
+a{
+    text-decoration: none;
+    color:black;
+}
+}
+
+.titulo{
+    @include flex(none,center,none);
+    display: flex;
+    @include sizes (350px, 75px);
+    margin: 30px;
+    border: 2px solid;
+    font-family: 'Noto Sans', sans-serif;
+    background: linear-gradient(to left, red, orange, yellow, green, blue);
+    transform: skewY(5deg);
+}
+
+#imagenhigiene{
+    @include sizes (200px, 200px);
+    display: flex;
+    border: 3px solid white;
+}
+#imagenrender1{
+   @extend #imagenhigiene
+}
+#imagenrender2{
+    @extend #imagenhigiene
+}
+#imagenlogo{
+    @extend #imagenhigiene
+}
+.titulocomunicacion{
+    @extend .titulo;
+    background-color: map-get($map: $colores, $key: celeste);
+    @include sizes (200px, none);
+}
+.tituloarquitectura{
+    @extend .titulo;
+    background-color: map-get($map: $colores, $key: amarillo);
+    @include sizes (200px, none);
+}
+.tituloasesorialegal{
+    @extend .titulo;
+    background-color: map-get($map: $colores, $key: marron);
+    @include sizes (200px, none);
+}
+.tituloenfermeria{
+    @extend .titulo;
+    background-color: map-get($map: $colores, $key: verde);
+    @include sizes (200px, none);
+}
+
+#Tabla  {
+    @include flex(column,flex-start,left);
+    display: flex;
+    @include sizes (100%, none);
+    background-color: map-get($map: $colores, $key: blanco);
+    color:map-get($map: $colores, $key: negro);
+    
+    
+    th, td {
+    border: solid 1px black;
+    }
+    
+    thead{
+        background-color:map-get($map: $colores, $key: celeste);
+        border-bottom: solid 5px;
+        color: map-get($map: $colores, $key: negro);
+    }
+}
+
+footer{
+    @include sizes (100%, 100%);
+background-color: map-get($map: $colores, $key: negro);
+
+ .formulariodecontacto{
+    @include flex(column,flex-start,left);
+    display: flex;
+    @include sizes (100%, 50%);
+    background-color: black;
+    color: map-get($map: $colores, $key: blanco);
+  }
+  .redes{
+    @extend .formulariodecontacto
+  }
+  .Facebook{
+      text-decoration: none;
+      color:map-get($map: $colores, $key: azul);
+  }
+  .Instagram{
+      text-decoration: none;
+      color: map-get($map: $colores, $key: violeta);
+  }
+  .Correoelectronico{
+      text-decoration: none;
+      color:map-get($map: $colores, $key: rojo) ;
+  }
+}
+
+
+
